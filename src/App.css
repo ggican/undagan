@@ -1,0 +1,32 @@
+/* Import fonts at the top */
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Pinyon+Script&display=swap');
+
+/* Then load Tailwind CSS layers */
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+/* Optional: Customize Tailwind's base styles if needed */
+@layer base {
+  .text-eb-garamond {
+    font-family: 'EB Garamond', serif;
+  }
+
+  .text-dm-sans {
+    font-family: 'DM Sans', serif
+  }
+
+  .text-pinyon-script {
+    font-family: 'Pinyon Script', serif;
+  }
+}
+
+
+
+
+#root {
+  width: 100%;
+  display: block;
+  height: 100%;
+}
