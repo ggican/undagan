@@ -22,10 +22,15 @@ function App() {
 
   const [isFirstLoad, setIsFirstLoad] = useState(true);
   const secondSectionRef = useRef(null);  //
+  const firstSectionRef = useRef(null);  //
 
   useEffect(() => {
     // Disable scrolling on first load
     if (isFirstLoad) {
+      firstSectionRef.current.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start', // Scroll to the top of the section
+      });
       document.body.style.overflow = 'hidden'; // Disable scroll
     }
   }, [isFirstLoad]);
@@ -44,7 +49,7 @@ function App() {
     <>
       <div className="w-full p-0 flex justify-center items-center">
         <div className="w-[550px]">
-          <section id="first" className="w-full h-screen relative">
+          <section ref={firstSectionRef} id="first" className="w-full h-screen relative">
             <div className="flower-right z-50 top-0 right-0 w-[30%] rotate-90 absolute  inline-flex justify-end">
               <img className="w-[100%]" src={flowerOne} alt="" />
             </div>
@@ -70,10 +75,10 @@ function App() {
 
               </div>
               <p className='text-eb-garamond text-[20px] text-[#6f3617] font-bold text-center'>SEMINAR PARENTING</p>
-              <p className='text-[#6f3617] mt-[30px] text-center font-bold uppercase text-eb-garamond text-[18px]'>
+              <p className='text-[#6f3617] mt-[10px] text-center font-bold uppercase text-eb-garamond text-[18px]'>
                 Kepada Bapak/ibu/saudara/i
               </p>
-              <p className='text-[#6f3617] mt-[30px] text-center font-normal text-eb-garamond text-[18px]'>
+              <p className='text-[#6f3617] mt-[10px] text-center font-normal text-eb-garamond text-[18px]'>
                 Tanpa mengurangi rasa hormat, kami mengundang anda untuk hadir di acara seminar parenting
               </p>
               <p className='text-[#6f3617]  mt-[10px] text-center font-bold text-eb-garamond text-[18px]'>
@@ -96,7 +101,7 @@ function App() {
                 </div>
               </div>
 
-              <div className='w-full flex justify-center mt-[20px] items-center'>
+              <div className='w-full flex justify-center mt-[10px] items-center'>
                 <span className="inline-flex text-[#6f3617]  mt-[10px] text-center font-bold text-eb-garamond text-[22px]">DES</span>
                 <span className="inline-flex bg-[#ec998b] text-[#000] w-[80px] h-[80px] justify-center items-center rounded-full  mt-[10px] text-center font-bold text-eb-garamond text-[30px] mx-[10px]">14</span>
                 <span className="inline-flex text-[#6f3617]  mt-[10px] text-center font-bold text-eb-garamond text-[22px]">2024</span>
