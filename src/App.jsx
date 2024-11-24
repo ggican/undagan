@@ -50,7 +50,7 @@ function App() {
       <div className="w-full p-0 flex justify-center items-center">
         <div className="w-[550px]">
           <section ref={firstSectionRef} id="first" className="w-full h-screen relative">
-            <div className="flower-right z-50 top-0 right-0 w-[30%] rotate-90 absolute  inline-flex justify-end">
+            <div className="flower-right z-50 top-0 right-0 w-[30%] rotate-90 absolute inline-flex justify-end">
               <img className="w-[100%]" src={flowerOne} alt="" />
             </div>
             <div className="flower-left z-50 top-0 left-0 w-[30%] absolute inline-flex justify-end">
@@ -61,14 +61,14 @@ function App() {
             <div className="flower-left z-10 top-0 left-0 [transform:rotateY(180deg)] w-[100%] absolute inline-flex justify-end">
               <img className="w-[100%]" src={rain} alt="" />
             </div>
-            <div className='absolute top-[0] left-[50%] bottom-0 flex flex-col justify-center items-center w-full [transform:translateX(-50%)] p-[20px]'>
+            <div className='absolute top-[0] left-[50%] bottom-0 flex flex-col justify-start pt-[40px] items-center w-full [transform:translateX(-50%)] p-[20px]'>
               <div className="w-full relative flex justify-center">
                 <p className='text-eb-garamond text-[#6f3617] pt-[30px] text-[30px] font-bold text-center relative'>
                   UNDANGAN
-                  <div className="w-[60px] absolute left-[-70px] top-0">
+                  <div className="w-[60px] z-50 absolute left-[-70px] top-0">
                     <img src={fks} alt="" />
                   </div>
-                  <div className="w-[70px] absolute right-[-90px] top-[-5px]">
+                  <div className="w-[70px] z-50 absolute right-[-90px] top-[-5px]">
                     <img src={insanAulia} alt="" />
                   </div>
                 </p>
