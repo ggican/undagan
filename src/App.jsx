@@ -46,7 +46,7 @@ function App() {
   return (
     <>
       <div className="w-full p-0 flex justify-center items-center">
-        <div className="w-[550px]">
+        <div className="w-[100%] md:w-[550px] sm:w-[550px] xs:w-[550px] lg:w-[550px]">
           <section ref={firstSectionRef} id="first" className="w-full h-screen relative">
             <div className="flower-right z-30 top-0 right-0 w-[30%] rotate-90 absolute inline-flex justify-end">
               <img className="w-[100%]" src={flowerOne} alt="" />
