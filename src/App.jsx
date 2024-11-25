@@ -21,22 +21,39 @@ const AvatarElement = () => {
 
 function App() {
 
+
   const secondSectionRef = useRef(null);  //
   const firstSectionRef = useRef(null);  //
+  const playMusic = useRef(null);  //
   const [isPlay, setPlay] = useState(false)
+
+
+  const toggleAudio = () => {
+    if (isPlay) {
+      playMusic.current?.pause();  // Pause the audio
+    } else {
+      playMusic.current?.play();  // Play the audio
+    }
+    setPlay(!isPlay);
+  };
+
 
   useEffect(() => {
     firstSectionRef.current.scrollIntoView({
       behavior: 'smooth',
       block: 'start', // Scroll to the top of the section
     });
-    setPlay(false)
-    setTimeout(() =>{
+
+    setTimeout(() => {
+      playMusic.current?.play()
       setPlay(true)
     }, [1200])
+    return () => { }
   }, [])
 
   const open = () => {
+    playMusic.current?.play();
+    setPlay(true);
     document.body.style.overflow = 'scroll'; // Disable scroll
     if (secondSectionRef.current) {
       secondSectionRef.current.scrollIntoView({
@@ -51,17 +68,13 @@ function App() {
     <>
       <div className="w-full p-0 flex justify-center items-center">
 
-        <button type="button" onClick={() => {
-          setPlay(!isPlay)
-        }} className='fixed bottom-[20px] left-[10px] z-[20000] bg-[#6f3617] inline-flex justify-center items-center w-[40px] h-[40px] rounded-full'>
+        <button type="button" onClick={toggleAudio} className='fixed bottom-[20px] left-[10px] z-[20000] bg-[#6f3617] inline-flex justify-center items-center w-[40px] h-[40px] rounded-full'>
           {
             !isPlay ? <VolumeOff size={18} color="#f1f1f1" /> : <Volume2 size={18} color="#f1f1f1" />
           }
-          <audio id="musicplayer" controls={false} muted={!isPlay} autoPlay={isPlay} loop>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio animi quaerat mollitia accusantium deserunt itaque cum, reiciendis similique porro odit? Provident quam eos unde, quasi voluptate quo aliquid temporibus placeat!
-            <source src={opening} type="audio/mp3" />
-          </audio>
+          <audio ref={playMusic} id="musicplayer" src={opening} controls={false} preload="auto" loop />
         </button>
+
 
         <div className="w-[100%] md:w-[450px] sm:w-[450px] xs:w-[450px] lg:w-[450px]">
 
