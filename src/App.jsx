@@ -5,9 +5,10 @@ import flowerOne from './assets/flower-one.webp'
 import rain from './assets/rain.gif'
 import avatar from './assets/avatar.jpeg'
 import insanAulia from './assets/insan-aulia.png'
+import opening from './assets/ceremony-small.mp3'
 import fks from './assets/fks.png'
 import './App.css'
-import { AlarmClock, CalendarClock, CalendarDays, House, MapPinned } from 'lucide-react'
+import { AlarmClock, CalendarClock, CalendarDays, House, MapPinned, Volume2, VolumeOff } from 'lucide-react'
 import { useEffect, useRef, useState } from 'react'
 
 const AvatarElement = () => {
@@ -22,6 +23,7 @@ function App() {
 
   const secondSectionRef = useRef(null);  //
   const firstSectionRef = useRef(null);  //
+  const [isPlay, setPlay] = useState(true)
 
   useEffect(() => {
     firstSectionRef.current.scrollIntoView({
@@ -44,7 +46,21 @@ function App() {
   return (
     <>
       <div className="w-full p-0 flex justify-center items-center">
+
+        <button type="button" onClick={() => {
+          setPlay(!isPlay)
+        }} className='fixed bottom-[20px] left-[10px] z-[20000] bg-[#6f3617] inline-flex justify-center items-center w-[40px] h-[40px] rounded-full'>
+          {
+            isPlay ? <VolumeOff size={18} color="#f1f1f1" /> : <Volume2 size={18} color="#f1f1f1" />
+          }
+          <audio id="musicplayer" controls={false} muted={!isPlay} autoPlay={isPlay} loop>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio animi quaerat mollitia accusantium deserunt itaque cum, reiciendis similique porro odit? Provident quam eos unde, quasi voluptate quo aliquid temporibus placeat!
+            <source src={opening} type="audio/mp3" />
+          </audio>
+        </button>
+
         <div className="w-[100%] md:w-[450px] sm:w-[450px] xs:w-[450px] lg:w-[450px]">
+
           <section ref={firstSectionRef} id="first" className="w-full h-screen relative">
             <div className='animate-slide-left'>
               <div className="flower-right z-30 top-0 right-0 w-[100px] rotate-90 absolute inline-flex justify-end">

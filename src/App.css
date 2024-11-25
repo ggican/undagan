@@ -7,6 +7,9 @@
 @tailwind utilities;
 
 
+body{
+  background-color: #f1f1f1;
+}
 /* Optional: Customize Tailwind's base styles if needed */
 @layer base {
   .text-eb-garamond {
