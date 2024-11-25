@@ -23,7 +23,7 @@ function App() {
 
   const secondSectionRef = useRef(null);  //
   const firstSectionRef = useRef(null);  //
-  const [isPlay, setPlay] = useState(true)
+  const [isPlay, setPlay] = useState(false)
 
   useEffect(() => {
     firstSectionRef.current.scrollIntoView({
@@ -33,7 +33,7 @@ function App() {
     setPlay(false)
     setTimeout(() =>{
       setPlay(true)
-    }, [750])
+    }, [1200])
   }, [])
 
   const open = () => {
@@ -147,8 +147,6 @@ function App() {
           </section>
 
           <section id="second" ref={secondSectionRef} className="w-full h-screen relative">
-
-
             <div className="flower-right z-30 top-0 right-0 w-[30%] absolute  inline-flex justify-end">
               <img className="w-[100%]" src={imageFlower} alt="" />
             </div>
