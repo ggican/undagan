@@ -30,6 +30,10 @@ function App() {
       behavior: 'smooth',
       block: 'start', // Scroll to the top of the section
     });
+    setPlay(false)
+    setTimeout(() =>{
+      setPlay(true)
+    }, [750])
   }, [])
 
   const open = () => {
@@ -51,7 +55,7 @@ function App() {
           setPlay(!isPlay)
         }} className='fixed bottom-[20px] left-[10px] z-[20000] bg-[#6f3617] inline-flex justify-center items-center w-[40px] h-[40px] rounded-full'>
           {
-            isPlay ? <VolumeOff size={18} color="#f1f1f1" /> : <Volume2 size={18} color="#f1f1f1" />
+            !isPlay ? <VolumeOff size={18} color="#f1f1f1" /> : <Volume2 size={18} color="#f1f1f1" />
           }
           <audio id="musicplayer" controls={false} muted={!isPlay} autoPlay={isPlay} loop>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Optio animi quaerat mollitia accusantium deserunt itaque cum, reiciendis similique porro odit? Provident quam eos unde, quasi voluptate quo aliquid temporibus placeat!
