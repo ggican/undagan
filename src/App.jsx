@@ -44,7 +44,7 @@ function App() {
   return (
     <>
       <div className="w-full p-0 flex justify-center items-center">
-        <div className="w-[100%] md:w-[550px] sm:w-[550px] xs:w-[550px] lg:w-[550px]">
+        <div className="w-[100%] md:w-[450px] sm:w-[450px] xs:w-[450px] lg:w-[450px]">
           <section ref={firstSectionRef} id="first" className="w-full h-screen relative">
             <div className='animate-slide-left'>
               <div className="flower-right z-30 top-0 right-0 w-[100px] rotate-90 absolute inline-flex justify-end">
@@ -77,10 +77,10 @@ function App() {
 
               </div>
               <p className='text-eb-garamond text-[18px] text-[#6f3617] font-bold text-center animate-slide-down'>SEMINAR PARENTING</p>
-              <p className='text-[#6f3617] mt-[10px] text-center font-bold uppercase text-eb-garamond text-[18px] animate-slide-down'>
+              <p className='text-[#6f3617] mt-[20px] text-center font-bold uppercase text-eb-garamond text-[18px] animate-slide-down'>
                 Kepada Bapak/ibu/saudara/i
               </p>
-              <p className='text-[#6f3617] mt-[10px] text-center font-normal text-eb-garamond text-[14px] animate-slide-down animate-slide-down'>
+              <p className='text-[#6f3617] mt-[10px] text-center font-normal text-eb-garamond text-[14px] animate-slide-down'>
                 Tanpa mengurangi rasa hormat, kami mengundang anda untuk hadir di acara seminar parenting
               </p>
               <div className='w-full flex justify-center items-center mt-[10px] animate-slide-down'>
@@ -129,15 +129,11 @@ function App() {
           <section id="second" ref={secondSectionRef} className="w-full h-screen relative">
 
 
-            <div className='animate-slide-left'>
-              <div className="flower-right z-30 top-0 right-0 w-[30%] absolute  inline-flex justify-end">
-                <img className="w-[100%]" src={imageFlower} alt="" />
-              </div>
+            <div className="flower-right z-30 top-0 right-0 w-[30%] absolute  inline-flex justify-end">
+              <img className="w-[100%]" src={imageFlower} alt="" />
             </div>
-            <div className="animate-slide-right">
-              <div className="flower-left z-30 top-0 left-0 [transform:rotateY(180deg)] w-[30%] absolute  inline-flex justify-end">
-                <img className="w-[100%]" src={imageFlower} alt="" />
-              </div>
+            <div className="flower-left z-30 top-0 left-0 [transform:rotateY(180deg)] w-[30%] absolute  inline-flex justify-end">
+              <img className="w-[100%]" src={imageFlower} alt="" />
             </div>
             {/* top */}
             <img className="w-full h-screen object-cover" src={imageBackground} alt="" />
@@ -229,7 +225,7 @@ function App() {
               </div>
               <div className='w-full flex justify-center flex-col items-center mt-[20px]'>
                 <div className='w-full flex justify-center items-center'>
-                  <a href="https://maps.app.goo.gl/Dapz8EcfZdKcYtHR7" target='blank' className=" text-white px-[20px] py-[10px] bg-[#6f3617] rounded-full ">
+                  <a href="https://maps.app.goo.gl/Dapz8EcfZdKcYtHR7" target='blank' className=" text-white  px-[20px] py-[10px] bg-[#6f3617] rounded-full ">
                     Google Maps
                   </a>
                 </div>
@@ -248,7 +244,7 @@ function App() {
                   </div>
                 </div>
                 <div className='w-full flex justify-center items-center mt-[20px]'>
-                  <a href="https://wa.me/6287860424961?text=Absen%20Kehadiran.%20%0ANama%20Peserta%20:%20%0A" target='blank' className=" text-white px-[20px] py-[10px] bg-[#6f3617] rounded-full ">
+                  <a href="https://wa.me/6287860424961?text=Absen%20Kehadiran.%20%0ANama%20Peserta%20:%20%0A" target='blank' className="hover:text-white text-white px-[20px] py-[10px] bg-[#6f3617] rounded-full ">
                     Konfirmasi Kehadiran
                   </a>
                 </div>
