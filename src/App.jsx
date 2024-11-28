@@ -280,7 +280,7 @@ function App() {
                   </a>
                 </div>
                 <p className='mt-[30px] text-dm-sans text-[14px] text-[#6f3617] font-bold text-center'>Hormat Kami</p>
-                <p className='text-dm-sans text-[14px] text-[#6f3617] font-bold text-center'>Panitia Seminar parenting Akbar</p>
+                <p className='text-dm-sans text-[14px] text-[#6f3617] font-bold text-center'>Panitia Seminar Parenting Akbar</p>
                 <p className='text-dm-sans text-[14px] text-[#6f3617] font-bold text-center'>FKKS SDIT INSAN AULIA</p>
 
               </div>
