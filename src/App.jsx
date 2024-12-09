@@ -6,7 +6,8 @@ import rain from '../public/rain.gif'
 import avatar from '../public/avatar.jpeg'
 import insanAulia from '../public/insan-aulia.png'
 import opening from '../public/ceremony-small.mp3'
-import fks from '../public/fks.png'
+// import fks from '../public/fks.png'
+import fks from '../public/test.jpeg'
 import './App.css'
 import { AlarmClock, CalendarClock, CalendarDays, House, MapPinned, Volume2, VolumeOff } from 'lucide-react'
 import { useEffect, useRef, useState } from 'react'
@@ -101,7 +102,7 @@ function App() {
                 <p className='animate-slide-down text-eb-garamond text-[#6f3617] pt-[30px] text-[25px] font-bold text-center relative'>
                   UNDANGAN
                   <div className="w-[60px] z-50 absolute left-[-90px] top-[35px]">
-                    <img src={fks} alt="" />
+                    <img className='rounded-full' src={fks} alt="" />
                   </div>
                   <div className="w-[70px] z-50 absolute right-[-100px] top-[25px]">
                     <img src={insanAulia} alt="" />
