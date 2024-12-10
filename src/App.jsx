@@ -276,7 +276,7 @@ function App() {
                   </div>
                 </div>
                 <div className='w-full flex justify-center items-center mt-[20px]'>
-                  <a href="https://wa.me/6287860424961?text=Absen%20Kehadiran.%20%0ANama%20Peserta%20:%20%0A" target='blank' className="hover:text-white text-white px-[20px] py-[10px] bg-[#6f3617] rounded-full ">
+                  <a href="https://wa.me/6287822475439?text=Absen%20Kehadiran.%20%0ANama%20Peserta%20:%20%0A" target='blank' className="hover:text-white text-white px-[20px] py-[10px] bg-[#6f3617] rounded-full ">
                     Konfirmasi Kehadiran
                   </a>
                 </div>
